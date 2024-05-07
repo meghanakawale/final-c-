@@ -1,4 +1,4 @@
-[4:35 PM, 5/7/2024] Meghana 💫: #include<iostream>
+#include<iostream>
 #include<string>
 using namespace std;
 #define MAX_SIZE 10
