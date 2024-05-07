@@ -1,1 +1,98 @@
+[4:38 PM, 5/7/2024] Meghana 💫: #include<iostream>
+using namespace std;
+class circle{
+   int cx,cy;
+   float slope,circumference ,x1,x2,y1,y2;
+   public:
+   circle(int cx,int cy)
+    {
+       this->cx=cx;
+       this->cy=cy;
+    }
+    circle(float x1, float x2, float y1, float y2)
+    {
+       this->x1=x1;
+       this->x2=x2;
+       this->y1=y1;
+       this->y2=y2;
+    }
+    void show()
+    {
+       slope = (y2-y1)/(x2-x1);
+       cout<<"slope is = "<<slope<<endl;
+    }
+     void getvalue()
+     {
+        cout<<"value fo x1,x2,y1,y2 ";
+        cin>>x1>>x2>>y1>>y2;
+     }
+    void showint()
+    {
+      slope = (y2-y1)/(x2-x1);
+      float h= y2-y1;
+      float j = x2-x1;
+      float f=slope*j;
+     cout<<"(y2-y1) = "<<h<<endl;
+     cout<<"(x2-x1) = "<<j<<endl;
+    cout<<"(s*(x2-x1)) = "<<j<…
+[4:38 PM, 5/7/2024] Meghana 💫: 6
+[4:39 PM, 5/7/2024] Meghana 💫: #include<iostream>
+using namespace std;
+class complex{
+    int a,b;
+    public:
+    void getvalue()
+    {
+       cout<<"enter value of a and b"<<endl;
+       cin>>a>>b;
+    }
+    void operator+()
+    {
+       a = +a;
+       b =  +b;
+    }
+void operator-()
+    {
+       a = -a;
+       b =  -b;
+    }
+    void display()
+    {
+      cout<<a<<"+"<<b<<"i"<<endl;
+    }
+    
+    complex operator +(complex object);
+    complex operator -(complex object);
+};
+complex complex :: operator+(complex object)
+{
+    complex t;
+    t.a = a + object.a;
+     t.b = b + object.b;
+     return (t);
+}
+complex complex :: operator-(complex object)
+{
+    complex t;
+    t.a = a - object.a;
+     t.b = b - object.b;
+     return (t);
+}
+int main()
+{
+   complex c1,c2,result,result1;
+   c1.getvalue(); 
+   c2.getvalue();
+   
+   cout<<".....................\n"<<endl;
+   c1.display();
+   c2.display();
+    cout<<".....................\n"<<endl;
+    result = c1 +c2;
+    result1 = c1 - c2;
+    cout<<".....................\n"<<endl;
+   result.display();
+   result1.display();
 
+   return 0;
+}
